@@ -13,8 +13,24 @@ class DataController: ObservableObject {
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
     @Published var filterText = ""
+    @Published var filterTokens = [Tag]()
     
     private var saveTask: Task<Void, Error>?
+    
+    var suggestedFilterTokens: [Tag] {
+        print(filterText)
+        guard filterText.starts(with: "#") else {
+            return []
+        }
+        let trimmedFilterText = String(filterText.dropFirst()).trimmingCharacters(in: .whitespaces)
+        let request = Tag.fetchRequest()
+        if trimmedFilterText.isEmpty == false {
+            request.predicate = NSPredicate(format: "name CONTAINS[c] %@", trimmedFilterText)
+        }
+        let a = (try? container.viewContext.fetch(request).sorted()) ?? []
+        print(a.map{$0.tagName})
+        return a
+    }
     
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -133,6 +149,18 @@ class DataController: ObservableObject {
             let contentPredicate = NSPredicate(format: "content CONTAINS[c] %@", trimmedFilterText)
             let combinedPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [titlePredicate, contentPredicate])
             predicates.append(combinedPredicate)
+        }
+        
+//        if filterTokens.isEmpty == false {
+//            let tokenPredicate = NSPredicate(format: "ANY tags in %@", filterTokens)
+//            predicates.append(tokenPredicate)
+//        }
+        
+        if filterTokens.isEmpty == false {
+            for filterToken in filterTokens {
+                let tokenPredicate = NSPredicate(format: "tags CONTAINS %@", filterToken)
+                predicates.append(tokenPredicate)
+            }
         }
         
         let request = Issue.fetchRequest()
