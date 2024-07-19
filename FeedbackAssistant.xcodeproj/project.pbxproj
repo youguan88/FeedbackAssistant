@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80EECA12C49FDD00098CC8A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D80EECA02C49FDD00098CC8A /* .gitignore */; };
 		D818ED0C2C494AF00066540A /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */; };
 		D818ED282C494C890066540A /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */; };
+		D818ED2C2C49530C0066540A /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818ED2B2C49530C0066540A /* IssueRow.swift */; };
 		D863CAE92C48076000842EBE /* FeedbackAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863CAE82C48076000842EBE /* FeedbackAssistantApp.swift */; };
 		D863CAEB2C48076000842EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863CAEA2C48076000842EBE /* ContentView.swift */; };
 		D863CAED2C48076100842EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D863CAEC2C48076100842EBE /* Assets.xcassets */; };
@@ -21,8 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D80EECA02C49FDD00098CC8A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		D818ED2B2C49530C0066540A /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 		D863CAE52C48076000842EBE /* FeedbackAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D863CAE82C48076000842EBE /* FeedbackAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAssistantApp.swift; sourceTree = "<group>"; };
 		D863CAEA2C48076000842EBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				D863CAE82C48076000842EBE /* FeedbackAssistantApp.swift */,
 				D863CAEA2C48076000842EBE /* ContentView.swift */,
 				D867A7E62C48C8240012B397 /* SidebarView.swift */,
+				D80EECA02C49FDD00098CC8A /* .gitignore */,
+				D818ED2B2C49530C0066540A /* IssueRow.swift */,
 				D867A7E82C48C82D0012B397 /* DetailView.swift */,
 				D87FCDDF2C489FDD00451197 /* Main.xcdatamodeld */,
 				D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */,
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D863CAF02C48076100842EBE /* Preview Assets.xcassets in Resources */,
+				D80EECA12C49FDD00098CC8A /* .gitignore in Resources */,
 				D863CAED2C48076100842EBE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +177,7 @@
 				D87FCDE32C48A2FE00451197 /* DataController.swift in Sources */,
 				D867A7E72C48C8240012B397 /* SidebarView.swift in Sources */,
 				D863CAEB2C48076000842EBE /* ContentView.swift in Sources */,
+				D818ED2C2C49530C0066540A /* IssueRow.swift in Sources */,
 				D863CAE92C48076000842EBE /* FeedbackAssistantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
