@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D80EECA12C49FDD00098CC8A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D80EECA02C49FDD00098CC8A /* .gitignore */; };
+		D80EECA32C4A009F0098CC8A /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80EECA22C4A009F0098CC8A /* IssueView.swift */; };
+		D80EECA52C4A00A60098CC8A /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80EECA42C4A00A60098CC8A /* NoIssueView.swift */; };
 		D818ED0C2C494AF00066540A /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */; };
 		D818ED282C494C890066540A /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */; };
 		D818ED2C2C49530C0066540A /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D818ED2B2C49530C0066540A /* IssueRow.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		D80EECA02C49FDD00098CC8A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D80EECA22C4A009F0098CC8A /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		D80EECA42C4A00A60098CC8A /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 		D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		D818ED2B2C49530C0066540A /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
@@ -78,12 +82,14 @@
 				D863CAE82C48076000842EBE /* FeedbackAssistantApp.swift */,
 				D863CAEA2C48076000842EBE /* ContentView.swift */,
 				D867A7E62C48C8240012B397 /* SidebarView.swift */,
-				D80EECA02C49FDD00098CC8A /* .gitignore */,
 				D818ED2B2C49530C0066540A /* IssueRow.swift */,
 				D867A7E82C48C82D0012B397 /* DetailView.swift */,
+				D80EECA22C4A009F0098CC8A /* IssueView.swift */,
+				D80EECA42C4A00A60098CC8A /* NoIssueView.swift */,
 				D87FCDDF2C489FDD00451197 /* Main.xcdatamodeld */,
 				D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */,
 				D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */,
+				D80EECA02C49FDD00098CC8A /* .gitignore */,
 				D863CAEC2C48076100842EBE /* Assets.xcassets */,
 				D863CAEE2C48076100842EBE /* Preview Content */,
 			);
@@ -177,6 +183,8 @@
 				D87FCDE32C48A2FE00451197 /* DataController.swift in Sources */,
 				D867A7E72C48C8240012B397 /* SidebarView.swift in Sources */,
 				D863CAEB2C48076000842EBE /* ContentView.swift in Sources */,
+				D80EECA32C4A009F0098CC8A /* IssueView.swift in Sources */,
+				D80EECA52C4A00A60098CC8A /* NoIssueView.swift in Sources */,
 				D818ED2C2C49530C0066540A /* IssueRow.swift in Sources */,
 				D863CAE92C48076000842EBE /* FeedbackAssistantApp.swift in Sources */,
 			);

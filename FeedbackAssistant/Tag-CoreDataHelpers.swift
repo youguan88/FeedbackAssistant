@@ -40,7 +40,7 @@ extension Tag: Comparable {
         if left == right {
             return lhs.tagID.uuidString < rhs.tagID.uuidString
         } else {
-            return lhs < rhs
+            return left < right
         }
     }
 }
