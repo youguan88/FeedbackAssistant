@@ -13,6 +13,8 @@ class DataController: ObservableObject {
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
     
+    private var saveTask: Task<Void, Error>?
+    
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
         dataController.createSampleData()
@@ -67,6 +69,17 @@ class DataController: ObservableObject {
         }
     }
     
+    func queueSave() {
+        saveTask?.cancel()
+        
+        saveTask = Task { @MainActor in
+            //print("Queueing save")
+            try await Task.sleep(for: .seconds(3))
+            save()
+            //print("Saved")
+        }
+    }
+    
     func delete(_ object:NSManagedObject) {
         objectWillChange.send()
         container.viewContext.delete(object)
@@ -99,5 +112,18 @@ class DataController: ObservableObject {
         let allTagsSet = Set(allTags)
         let difference = allTagsSet.symmetricDifference(issue.issueTags)
         return difference.sorted()
+    }
+    
+    func issuesForSelectedFilter() -> [Issue] {
+        let filter = selectedFilter ?? .all
+        var allIssues: [Issue]
+        if let tag = filter.tag {
+            allIssues = tag.issues?.allObjects as? [Issue] ?? []
+        } else {
+            let request = Issue.fetchRequest()
+            request.predicate = NSPredicate(format: "modifiedDate > %@", filter.minModificationDate as NSDate)
+            allIssues = (try? container.viewContext.fetch(request)) ?? []
+        }
+        return allIssues.sorted()
     }
 }

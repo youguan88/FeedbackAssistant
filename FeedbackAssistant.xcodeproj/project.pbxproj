@@ -75,7 +75,6 @@
 		D863CAE72C48076000842EBE /* FeedbackAssistant */ = {
 			isa = PBXGroup;
 			children = (
-				D867A7EA2C48C90F0012B397 /* Filter.swift */,
 				D87FCDE52C48AEE800451197 /* Info.plist */,
 				D87FCDE42C48AEDF00451197 /* FeedbackAssistant.entitlements */,
 				D87FCDE22C48A2FE00451197 /* DataController.swift */,
@@ -87,6 +86,7 @@
 				D80EECA22C4A009F0098CC8A /* IssueView.swift */,
 				D80EECA42C4A00A60098CC8A /* NoIssueView.swift */,
 				D87FCDDF2C489FDD00451197 /* Main.xcdatamodeld */,
+				D867A7EA2C48C90F0012B397 /* Filter.swift */,
 				D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */,
 				D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */,
 				D80EECA02C49FDD00098CC8A /* .gitignore */,

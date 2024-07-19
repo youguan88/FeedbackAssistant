@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct FeedbackAssistantApp: App {
+    @Environment(\.scenePhase) var scenePhase
     @StateObject var dataController = DataController()
     
     var body: some Scene {
@@ -22,6 +23,11 @@ struct FeedbackAssistantApp: App {
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
+            .onChange(of: scenePhase) {
+                if scenePhase != .active {
+                    dataController.save()
+                }
+            }
         }
     }
 }
