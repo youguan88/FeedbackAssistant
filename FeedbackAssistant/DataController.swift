@@ -197,6 +197,13 @@ class DataController: ObservableObject {
         return allIssues
     }
     
+    func newTag() {
+        let tag = Tag(context: container.viewContext)
+        tag.id = UUID()
+        tag.name = "New tag"
+        save()
+    }
+    
     func newIssue() {
         let issue = Issue(context: container.viewContext)
         issue.title = "New Issue"
