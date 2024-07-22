@@ -45,6 +45,11 @@ struct SidebarView: View {
                                 } label: {
                                     Label("Rename", systemImage: "pencil")
                                 }
+                                Button(role: .destructive) {
+                                    delete(filter)
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
                             }))
                     }
                 }
@@ -97,6 +102,12 @@ struct SidebarView: View {
     
     func completeRename() {
         tagToRename?.name = tagName
+        dataController.save()
+    }
+    
+    func delete(_ filter: Filter) {
+        guard let tag = filter.tag else { return }
+        dataController.delete(tag)
         dataController.save()
     }
 }
