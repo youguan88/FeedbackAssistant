@@ -85,6 +85,7 @@ struct SidebarView: View {
         //    AwardsView()
         //})
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
+        .navigationTitle("Filters")
     }
     
     func delete(_ offsets: IndexSet) {
