@@ -69,6 +69,10 @@ struct ContentView: View {
                 Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
                     .symbolVariant(dataController.filterEnabled ? .fill : .none)
             }
+            
+            Button(action: dataController.newIssue) {
+                Label("New Issue", systemImage: "square.and.pencil")
+            }
         }
     }
     func delete(_ offsets: IndexSet) {
