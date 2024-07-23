@@ -30,7 +30,7 @@ struct IssueRow: View {
                 Spacer()
                 
                 VStack(alignment: .trailing, content: {
-                    Text(issue.issueCreatedDate.formatted(date: .numeric, time: .omitted))
+                    Text(issue.issueCreatedDateFormatted)
                         .font(.subheadline)
                     
                     if issue.completed {
