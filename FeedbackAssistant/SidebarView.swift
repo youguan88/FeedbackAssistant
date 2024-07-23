@@ -28,54 +28,19 @@ struct SidebarView: View {
         List(selection: $dataController.selectedFilter, content: {
             Section("Smart Filters"){
                 ForEach(smartFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
-                    }
+                    SmartFilterRow(filter: filter)
                 }
             }
-            
             Section("Tags") {
                 ForEach(tagFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
-                            .badge("\(filter.tag?.tagActiveIssues.count ?? 0) issues")
-                            .contextMenu(ContextMenu(menuItems: {
-                                Button {
-                                    rename(filter)
-                                } label: {
-                                    Label("Rename", systemImage: "pencil")
-                                }
-                                Button(role: .destructive) {
-                                    delete(filter)
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-                            }))
-                    }
+                    UserFilterRow(filter: filter, rename: rename, delete: delete)
                 }
                 .onDelete(perform: delete)
             }
         })
-        .toolbar {
-            Button(action: dataController.newTag, label: {
-                Label("Add tag", systemImage: "plus")
-            })
-            
-            Button {
-                showingAwards.toggle()
-            } label: {
-                Label("Show awards", systemImage: "rosette")
-            }
-            
-            #if DEBUG
-            Button {
-                dataController.deleteAll()
-                dataController.createSampleData()
-            } label: {
-                Label("ADD SAMPLES", systemImage: "flame")
-            }
-            #endif
-        }
+        .toolbar(content: {
+            SidebarViewToolbar(showingAwards: $showingAwards)
+        })
         .alert("Rename tag", isPresented: $renamingTag) {
             Button("OK", action: completeRename)
             Button("Cancel", role: .cancel) {}

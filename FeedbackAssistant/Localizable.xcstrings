@@ -307,6 +307,16 @@
         }
       }
     },
+    "Locked" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Locked"
+          }
+        }
+      }
+    },
     "Low" : {
       "localizations" : {
         "en" : {
@@ -569,6 +579,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turn Filter On"
+          }
+        }
+      }
+    },
+    "Unlocked: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unlocked: %@"
           }
         }
       }

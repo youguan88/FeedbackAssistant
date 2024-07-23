@@ -15,7 +15,7 @@ struct AwardsView: View {
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
-    var awardTitle : String {
+    var awardTitle : LocalizedStringKey {
         if dataController.hasEarned(award: selectedAward) {
             return "Unlocked: \(selectedAward.name)"
         } else {
@@ -37,7 +37,7 @@ struct AwardsView: View {
                                 .scaledToFit()
                                 .padding()
                                 .frame(width: 100, height: 100)
-                                .foregroundColor(dataController.hasEarned(award: award) ? Color(award.color) : .secondary.opacity(0.5))
+                                .foregroundColor(color(for: award))
                         }
                     }
                 })
@@ -47,6 +47,10 @@ struct AwardsView: View {
         .alert(isPresented: $showingAwardDetails, content: {
             Alert(title: Text(awardTitle), message: Text(selectedAward.description))
         })
+    }
+    
+    func color(for award: Award) -> Color {
+        dataController.hasEarned(award: award) ? Color(award.color) : .secondary.opacity(0.5)
     }
 }
 
