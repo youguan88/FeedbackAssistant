@@ -10,17 +10,17 @@ import SwiftUI
 struct TagsMenuView: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var issue: Issue
-    
+
     var body: some View {
         Menu {
             ForEach(issue.issueTags) { tag in
-                Button{
+                Button {
                     issue.removeFromTags(tag)
                 } label: {
                     Label(tag.tagName, systemImage: "checkmark")
                 }
             }
-            
+
             let otherTags = dataController.missingTags(from: issue)
             if otherTags.isEmpty == false {
                 Divider()

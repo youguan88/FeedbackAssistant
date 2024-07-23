@@ -10,20 +10,20 @@ import SwiftUI
 struct IssueView: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var issue: Issue
-    
+
     var body: some View {
         Form {
             Section {
                 VStack(alignment: .leading, content: {
                     TextField("Title", text: $issue.issueTitle, prompt: Text("Enter the issue title here"))
                 })
-                
+
                 Text("**Modified:** \(issue.issueModifiedDate.formatted(date: .long, time: .shortened))")
                     .foregroundStyle(.secondary)
-                
+
                 Text("**Status:** \(issue.issueStatus)")
                     .foregroundStyle(.secondary)
-                
+
                 Picker("Priority", selection: $issue.priority) {
                     Text("Low").tag(Int16(0))
                     Text("Medium").tag(Int16(1))
@@ -36,7 +36,10 @@ struct IssueView: View {
                     Text("Basic Information")
                         .font(.title2)
                         .foregroundStyle(.secondary)
-                    TextField("Description", text: $issue.issueContent, prompt: Text("Enter the issue description here"), axis: .vertical)
+                    TextField("Description",
+                              text: $issue.issueContent,
+                              prompt: Text("Enter the issue description here"),
+                              axis: .vertical)
                 })
             }
         }

@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct AwardsView: View {
-    @EnvironmentObject var dataController : DataController
+    @EnvironmentObject var dataController: DataController
     @State private var selectedAward = Award.example
     @State private var showingAwardDetails = false
-    
+
     var columns: [GridItem] {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
-    var awardTitle : LocalizedStringKey {
+    var awardTitle: LocalizedStringKey {
         if dataController.hasEarned(award: selectedAward) {
             return "Unlocked: \(selectedAward.name)"
         } else {
             return "Locked"
         }
     }
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -48,7 +48,7 @@ struct AwardsView: View {
             Alert(title: Text(awardTitle), message: Text(selectedAward.description))
         })
     }
-    
+
     func color(for award: Award) -> Color {
         dataController.hasEarned(award: award) ? Color(award.color) : .secondary.opacity(0.5)
     }
