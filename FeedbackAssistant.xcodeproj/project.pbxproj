@@ -80,6 +80,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D82AC06C2C50B063009E7407 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				D867A7EA2C48C90F0012B397 /* Filter.swift */,
+				D867A7E62C48C8240012B397 /* SidebarView.swift */,
+				D8814AFA2C4F56CE00F29B18 /* SidebarViewToolbar.swift */,
+				D844DC0C2C4FD9C10041A140 /* SmartFilterRow.swift */,
+				D844DC0E2C4FDAEC0041A140 /* UserFilterRow.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		D82AC06D2C50B0C7009E7407 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				D863CAEA2C48076000842EBE /* ContentView.swift */,
+				D8814AFE2C4F5A9200F29B18 /* ContentViewToolbar.swift */,
+				D818ED2B2C49530C0066540A /* IssueRow.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		D82AC06E2C50B0F4009E7407 /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				D867A7E82C48C82D0012B397 /* DetailView.swift */,
+				D80EECA22C4A009F0098CC8A /* IssueView.swift */,
+				D8814AFC2C4F59A000F29B18 /* IssueViewToolbar.swift */,
+				D844DC0A2C4FD8740041A140 /* TagsMenuView.swift */,
+				D80EECA42C4A00A60098CC8A /* NoIssueView.swift */,
+			);
+			path = Editing;
+			sourceTree = "<group>";
+		};
+		D82AC06F2C50B12C009E7407 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				D8F207BD2C4E86F700A43FC5 /* Award.swift */,
+				D8F207BA2C4E865300A43FC5 /* Awards.json */,
+				D8F207BF2C4E880600A43FC5 /* AwardsView.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		D82AC0702C50B166009E7407 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D86D79C52C4E180D0051EF57 /* Bundle-Decodable.swift */,
+				D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */,
+				D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D82AC0712C50B189009E7407 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D87FCDE22C48A2FE00451197 /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D863CADC2C48076000842EBE = {
 			isa = PBXGroup;
 			children = (
@@ -99,34 +161,20 @@
 		D863CAE72C48076000842EBE /* FeedbackAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				D82AC0712C50B189009E7407 /* Controllers */,
+				D82AC0702C50B166009E7407 /* Extensions */,
+				D82AC06F2C50B12C009E7407 /* Awards */,
+				D82AC06E2C50B0F4009E7407 /* Editing */,
+				D82AC06D2C50B0C7009E7407 /* Issues */,
+				D82AC06C2C50B063009E7407 /* Filters */,
 				D87FCDE52C48AEE800451197 /* Info.plist */,
 				D87FCDE42C48AEDF00451197 /* FeedbackAssistant.entitlements */,
-				D87FCDE22C48A2FE00451197 /* DataController.swift */,
 				D863CAE82C48076000842EBE /* FeedbackAssistantApp.swift */,
-				D867A7E62C48C8240012B397 /* SidebarView.swift */,
-				D8814AFA2C4F56CE00F29B18 /* SidebarViewToolbar.swift */,
-				D844DC0C2C4FD9C10041A140 /* SmartFilterRow.swift */,
-				D844DC0E2C4FDAEC0041A140 /* UserFilterRow.swift */,
-				D863CAEA2C48076000842EBE /* ContentView.swift */,
-				D8814AFE2C4F5A9200F29B18 /* ContentViewToolbar.swift */,
-				D818ED2B2C49530C0066540A /* IssueRow.swift */,
-				D80EECA22C4A009F0098CC8A /* IssueView.swift */,
-				D8814AFC2C4F59A000F29B18 /* IssueViewToolbar.swift */,
-				D844DC0A2C4FD8740041A140 /* TagsMenuView.swift */,
-				D80EECA42C4A00A60098CC8A /* NoIssueView.swift */,
-				D867A7E82C48C82D0012B397 /* DetailView.swift */,
 				D87FCDDF2C489FDD00451197 /* Main.xcdatamodeld */,
-				D86D79C52C4E180D0051EF57 /* Bundle-Decodable.swift */,
-				D867A7EA2C48C90F0012B397 /* Filter.swift */,
-				D818ED0B2C494AF00066540A /* Issue-CoreDataHelpers.swift */,
-				D818ED272C494C890066540A /* Tag-CoreDataHelpers.swift */,
-				D8F207BA2C4E865300A43FC5 /* Awards.json */,
-				D8F207BD2C4E86F700A43FC5 /* Award.swift */,
-				D8F207BF2C4E880600A43FC5 /* AwardsView.swift */,
 				D8814AF82C4F390000F29B18 /* Localizable.xcstrings */,
-				D8F207B92C4E865300A43FC5 /* Colors.xcassets */,
 				D80EECA02C49FDD00098CC8A /* .gitignore */,
 				D863CAEC2C48076100842EBE /* Assets.xcassets */,
+				D8F207B92C4E865300A43FC5 /* Colors.xcassets */,
 				D863CAEE2C48076100842EBE /* Preview Content */,
 			);
 			path = FeedbackAssistant;
