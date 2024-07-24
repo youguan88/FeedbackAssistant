@@ -16,7 +16,11 @@ enum Status {
     case all, open, closed
 }
 
+
+/// An environemnt singleton responsible for managing our Core Data stack, including handling saving,
+/// counting fetch requests, tracking orders and dealing with sample data
 class DataController: ObservableObject {
+    /// The lone CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
 
     @Published var selectedFilter: Filter? = Filter.all
@@ -50,14 +54,24 @@ class DataController: ObservableObject {
         return dataController
     }()
 
+    /// Initializes a data controller, either in memory (for testing use such as previewing)
+    /// or on permanent storage (for use in regular app runs.) Defaults to permanent storage.
+    /// - Parameter inMemory: Whether to store this data in temporary memory or not
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
+
+        // For testing and previewing purposes, we create a
+        // temporary, in-memory database by writing to /dev/null
+        // so our data is destroyed after teh app finishes running
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(filePath: "/dev/null")
         }
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
 
+        // Make sure that we watch iCloud for all changes to make
+        // absolutely sure we keep our local UI in sync when a
+        // remote change happens.
         container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey:
                                                                 NSPersistentStoreRemoteChangeNotificationPostOptionKey)
         NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange,
@@ -96,13 +110,15 @@ class DataController: ObservableObject {
         }
         try? viewContext.save()
     }
-
+    
+    /// Saves our Core Data context if there are changes
     func save() {
         saveTask?.cancel()
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
         }
     }
+
     func queueSave() {
         saveTask?.cancel()
         saveTask = Task { @MainActor in
@@ -112,19 +128,26 @@ class DataController: ObservableObject {
             // print("Saved")
         }
     }
+
     func delete(_ object: NSManagedObject) {
         objectWillChange.send()
         container.viewContext.delete(object)
         save()
     }
+
     private func delete(_ fetchRequest: NSFetchRequest<NSFetchRequestResult>) {
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         batchDeleteRequest.resultType = .resultTypeObjectIDs
+
+        // When performing a batch delete we need to make sure we read the result back
+        // then merge all the changes from that result back into our live view context
+        // so that the two stay in sync.
         if let delete = try? container.viewContext.execute(batchDeleteRequest) as? NSBatchDeleteResult {
             let changes = [NSDeletedObjectsKey: delete.result as? [NSManagedObjectID] ?? []]
             NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [container.viewContext])
         }
     }
+
     func deleteAll() {
         let allTags: NSFetchRequest<NSFetchRequestResult> = Tag.fetchRequest()
         delete(allTags)
@@ -132,6 +155,7 @@ class DataController: ObservableObject {
         delete(allIssues)
         save()
     }
+
     func missingTags(from issue: Issue) -> [Tag] {
         let request = Tag.fetchRequest()
         let allTags = (try? container.viewContext.fetch(request)) ?? []
@@ -139,6 +163,10 @@ class DataController: ObservableObject {
         let difference = allTagsSet.symmetricDifference(issue.issueTags)
         return difference.sorted()
     }
+    
+    /// Runs a fetch request with various predicates that filter the user's issues based on
+    /// tag, title, and content text, search tokens, priority, and completion status
+    /// - Returns: An array of all matching issues
     func issuesForSelectedFilter() -> [Issue] {
         let filter = selectedFilter ?? .all
         var predicates = [NSPredicate]()
@@ -187,26 +215,34 @@ class DataController: ObservableObject {
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         return allIssues
     }
+
     func newTag() {
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
         tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
         save()
     }
+
     func newIssue() {
         let issue = Issue(context: container.viewContext)
         issue.title = NSLocalizedString("New issue", comment: "Create a new issue")
         issue.createdDate = .now
         issue.priority = 1
+
+        // If we are currently browsing a user-created tag, immediately
+        // add this new issue to the tag otherwise it won't appear in
+        // the list of issues they see.
         if let tag = selectedFilter?.tag {
             issue.addToTags(tag)
         }
         save()
         selectedIssue = issue
     }
+
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
+
     func hasEarned(award: Award) -> Bool {
         switch award.criterion {
         case "issues":

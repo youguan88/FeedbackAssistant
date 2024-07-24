@@ -60,6 +60,7 @@
       }
     },
     "ADD SAMPLES" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
