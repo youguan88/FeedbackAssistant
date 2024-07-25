@@ -16,7 +16,6 @@ enum Status {
     case all, open, closed
 }
 
-
 /// An environemnt singleton responsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking orders and dealing with sample data
 class DataController: ObservableObject {
@@ -54,11 +53,22 @@ class DataController: ObservableObject {
         return dataController
     }()
 
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file.")
+        }
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load Model file.")
+        }
+        return managedObjectModel
+    }()
+
     /// Initializes a data controller, either in memory (for testing use such as previewing)
     /// or on permanent storage (for use in regular app runs.) Defaults to permanent storage.
+    /// Loads managed object model only once
     /// - Parameter inMemory: Whether to store this data in temporary memory or not
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -110,7 +120,7 @@ class DataController: ObservableObject {
         }
         try? viewContext.save()
     }
-    
+
     /// Saves our Core Data context if there are changes
     func save() {
         saveTask?.cancel()
@@ -163,7 +173,7 @@ class DataController: ObservableObject {
         let difference = allTagsSet.symmetricDifference(issue.issueTags)
         return difference.sorted()
     }
-    
+
     /// Runs a fetch request with various predicates that filter the user's issues based on
     /// tag, title, and content text, search tokens, priority, and completion status
     /// - Returns: An array of all matching issues
