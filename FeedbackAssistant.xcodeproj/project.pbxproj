@@ -46,6 +46,8 @@
 		D8F207BC2C4E865300A43FC5 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D8F207BA2C4E865300A43FC5 /* Awards.json */; };
 		D8F207BE2C4E86F700A43FC5 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F207BD2C4E86F700A43FC5 /* Award.swift */; };
 		D8F207C02C4E880600A43FC5 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F207BF2C4E880600A43FC5 /* AwardsView.swift */; };
+		D8F6EA8B2C566E7E009CA730 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6EA8A2C566E7E009CA730 /* ContentViewModel.swift */; };
+		D8F6EA8D2C566FE9009CA730 /* IssueRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6EA8C2C566FE9009CA730 /* IssueRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		D8F207BA2C4E865300A43FC5 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
 		D8F207BD2C4E86F700A43FC5 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		D8F207BF2C4E880600A43FC5 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		D8F6EA8A2C566E7E009CA730 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		D8F6EA8C2C566FE9009CA730 /* IssueRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +159,9 @@
 			children = (
 				D863CAEA2C48076000842EBE /* ContentView.swift */,
 				D8814AFE2C4F5A9200F29B18 /* ContentViewToolbar.swift */,
+				D8F6EA8A2C566E7E009CA730 /* ContentViewModel.swift */,
 				D818ED2B2C49530C0066540A /* IssueRow.swift */,
+				D8F6EA8C2C566FE9009CA730 /* IssueRowViewModel.swift */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 				D86D79C62C4E180D0051EF57 /* Bundle-Decodable.swift in Sources */,
 				D867A7E92C48C82D0012B397 /* DetailView.swift in Sources */,
 				D84CA03A2C53D496005E291F /* SidebarViewModel.swift in Sources */,
+				D8F6EA8B2C566E7E009CA730 /* ContentViewModel.swift in Sources */,
 				D87FCDE32C48A2FE00451197 /* DataController.swift in Sources */,
 				D8814AFF2C4F5A9200F29B18 /* ContentViewToolbar.swift in Sources */,
 				D867A7E72C48C8240012B397 /* SidebarView.swift in Sources */,
@@ -456,6 +463,7 @@
 				D80EECA52C4A00A60098CC8A /* NoIssueView.swift in Sources */,
 				D818ED2C2C49530C0066540A /* IssueRow.swift in Sources */,
 				D863CAE92C48076000842EBE /* FeedbackAssistantApp.swift in Sources */,
+				D8F6EA8D2C566FE9009CA730 /* IssueRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
