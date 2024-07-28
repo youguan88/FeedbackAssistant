@@ -17,6 +17,7 @@ struct IssueRow: View {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
                     .opacity(issue.priority == 2 ? 1 : 0)
+                    .accessibilityIdentifier(issue.priority == 2 ? "\(issue.issueTitle) High Priority" : "")
 
                 VStack(alignment: .leading, content: {
                     Text(issue.issueTitle)
@@ -41,6 +42,7 @@ struct IssueRow: View {
                 .foregroundStyle(.secondary)
             }
         }
+        .accessibilityIdentifier(issue.issueTitle)
     }
 }
 
