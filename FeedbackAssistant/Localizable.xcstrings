@@ -8,6 +8,12 @@
             "state" : "translated",
             "value" : "**Modified:** %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**更改:** %@"
+          }
         }
       }
     },
@@ -17,6 +23,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Status:** %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**状态:** %@"
           }
         }
       }
@@ -46,6 +58,24 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld 个问题"
+                }
+              },
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "暂无问题"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -55,6 +85,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actions"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行动"
           }
         }
       }
@@ -66,6 +102,12 @@
             "state" : "translated",
             "value" : "ADD SAMPLES"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增加标本"
+          }
         }
       }
     },
@@ -75,6 +117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add tag"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增加标签"
           }
         }
       }
@@ -86,6 +134,12 @@
             "state" : "translated",
             "value" : "Add Tags"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "增加标签"
+          }
         }
       }
     },
@@ -95,6 +149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "All"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
           }
         }
       }
@@ -107,6 +167,12 @@
             "state" : "translated",
             "value" : "All Issues"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部问题"
+          }
         }
       }
     },
@@ -116,6 +182,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Awards"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "徽章"
           }
         }
       }
@@ -127,6 +199,12 @@
             "state" : "translated",
             "value" : "Basic Information"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基本资料"
+          }
         }
       }
     },
@@ -136,6 +214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
@@ -147,15 +231,28 @@
             "state" : "translated",
             "value" : "Close Issue"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭问题"
+          }
         }
       }
     },
     "Closed" : {
+      "comment" : "This issue has been resolved by user.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Closed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已完成"
           }
         }
       }
@@ -167,6 +264,12 @@
             "state" : "translated",
             "value" : "CLOSED"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已完成"
+          }
         }
       }
     },
@@ -176,6 +279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copy Issue Title"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制标题"
           }
         }
       }
@@ -187,6 +296,12 @@
             "state" : "translated",
             "value" : "Date Created"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建日期"
+          }
         }
       }
     },
@@ -196,6 +311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Date Modified"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新更改日期"
           }
         }
       }
@@ -207,6 +328,12 @@
             "state" : "translated",
             "value" : "Delete"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
         }
       }
     },
@@ -216,6 +343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Description"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "描述"
           }
         }
       }
@@ -227,6 +360,12 @@
             "state" : "translated",
             "value" : "Details"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "细节"
+          }
         }
       }
     },
@@ -236,6 +375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enter the issue description here"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请描述问题"
           }
         }
       }
@@ -247,6 +392,12 @@
             "state" : "translated",
             "value" : "Enter the issue title here"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入标题"
+          }
         }
       }
     },
@@ -256,6 +407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filter"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "筛选"
           }
         }
       }
@@ -267,6 +424,12 @@
             "state" : "translated",
             "value" : "Filter Issues, or type # to add tags"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "筛选问题或按#来加标签"
+          }
         }
       }
     },
@@ -277,6 +440,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filters"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部筛选"
           }
         }
       }
@@ -304,6 +473,12 @@
             "state" : "translated",
             "value" : "Issues"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "问题"
+          }
         }
       }
     },
@@ -313,6 +488,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Locked"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未解锁"
           }
         }
       }
@@ -357,6 +538,12 @@
             "state" : "translated",
             "value" : "New issue"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新问题"
+          }
         }
       }
     },
@@ -368,6 +555,12 @@
             "state" : "translated",
             "value" : "New Issue"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新问题"
+          }
         }
       }
     },
@@ -377,6 +570,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "New name"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新名字"
           }
         }
       }
@@ -389,6 +588,12 @@
             "state" : "translated",
             "value" : "New tag"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新标签"
+          }
         }
       }
     },
@@ -398,6 +603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Newest to Oldest"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以最新排列"
           }
         }
       }
@@ -409,6 +620,29 @@
             "state" : "translated",
             "value" : "No Issue Selected"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未选择问题"
+          }
+        }
+      }
+    },
+    "No tags" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tags"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无标签"
+          }
         }
       }
     },
@@ -418,6 +652,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续"
           }
         }
       }
@@ -429,15 +669,28 @@
             "state" : "translated",
             "value" : "Oldest to Newest"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以最早排列"
+          }
         }
       }
     },
     "Open" : {
+      "comment" : "THis issue is currently unresolved",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未完成"
           }
         }
       }
@@ -449,6 +702,12 @@
             "state" : "translated",
             "value" : "Priority"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "优先等级"
+          }
         }
       }
     },
@@ -458,6 +717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Re-open Issue"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重开"
           }
         }
       }
@@ -470,6 +735,12 @@
             "state" : "translated",
             "value" : "Recent Issues"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新问题"
+          }
         }
       }
     },
@@ -479,6 +750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rename"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更改标题"
           }
         }
       }
@@ -490,6 +767,12 @@
             "state" : "translated",
             "value" : "Rename tag"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更改标签"
+          }
         }
       }
     },
@@ -499,6 +782,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show awards"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示徽章"
           }
         }
       }
@@ -510,6 +799,12 @@
             "state" : "translated",
             "value" : "Smart Filters"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定制筛选"
+          }
         }
       }
     },
@@ -519,6 +814,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sort By"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "排列"
           }
         }
       }
@@ -530,6 +831,12 @@
             "state" : "translated",
             "value" : "Sort Order"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "排列顺序"
+          }
         }
       }
     },
@@ -539,6 +846,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Status"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "状态"
           }
         }
       }
@@ -550,6 +863,12 @@
             "state" : "translated",
             "value" : "Tags"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部标签"
+          }
         }
       }
     },
@@ -559,6 +878,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Title"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "标题"
           }
         }
       }
@@ -570,6 +895,12 @@
             "state" : "translated",
             "value" : "Turn Filter Off"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭筛选"
+          }
         }
       }
     },
@@ -580,6 +911,12 @@
             "state" : "translated",
             "value" : "Turn Filter On"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动筛选"
+          }
         }
       }
     },
@@ -589,6 +926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unlocked: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已解锁: %@"
           }
         }
       }
