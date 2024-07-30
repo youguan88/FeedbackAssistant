@@ -49,6 +49,10 @@ extension Issue {
         }
     }
 
+    var issueReminderTime: Date {
+        get { reminderTime ?? .now}
+        set { reminderTime = newValue }
+    }
 
 
     static var example: Issue {

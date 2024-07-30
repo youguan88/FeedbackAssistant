@@ -224,6 +224,22 @@
         }
       }
     },
+    "Check Settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check Settings"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查设置"
+          }
+        }
+      }
+    },
     "Close Issue" : {
       "localizations" : {
         "en" : {
@@ -678,6 +694,22 @@
         }
       }
     },
+    "Oops!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不好意思！"
+          }
+        }
+      }
+    },
     "Open" : {
       "comment" : "THis issue is currently unresolved",
       "localizations" : {
@@ -744,6 +776,38 @@
         }
       }
     },
+    "Reminder Time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminder Time"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提醒时间"
+          }
+        }
+      }
+    },
+    "Reminders" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminders"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部提醒"
+          }
+        }
+      }
+    },
     "Rename" : {
       "localizations" : {
         "en" : {
@@ -788,6 +852,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "显示徽章"
+          }
+        }
+      }
+    },
+    "Show reminders" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show reminders"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示全部提醒"
           }
         }
       }
@@ -868,6 +948,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部标签"
+          }
+        }
+      }
+    },
+    "There was a problem setting your notification. Please check you have notifications enabled." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There was a problem setting your notification. Please check you have notifications enabled."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置提醒出现问题。请确保提醒功能已启用。"
           }
         }
       }
