@@ -22,6 +22,7 @@ enum Status {
 class DataController: ObservableObject {
     /// The lone CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
+    var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
 
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
@@ -90,14 +91,26 @@ class DataController: ObservableObject {
                                                queue: .main,
                                                using: remoteStoreChanged)
 
-        container.loadPersistentStores { _, error in
+        container.loadPersistentStores { [weak self] _, error in
             if let error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
 
+            if let description = self?.container.persistentStoreDescriptions.first {
+                description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+
+                if let coordinator = self?.container.persistentStoreCoordinator {
+                    self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate (
+                        forStoreWith: description,
+                        coordinator: coordinator
+                    )
+                    self?.spotlightDelegate?.startSpotlightIndexing()
+                }
+            }
+
             #if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
-                self.deleteAll()
+                self?.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
             #endif
@@ -280,5 +293,18 @@ class DataController: ObservableObject {
             // fatalError("Unknown award criterion: \(award.criterion)")
             return false
         }
+    }
+
+    // get issue Object based on string
+    func issue(with uniqueIdentifier: String) -> Issue? {
+        guard let url = URL(string: uniqueIdentifier) else {
+            return nil
+        }
+        // get Object ID based on string
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url)
+        else {
+            return nil
+        }
+        return try? container.viewContext.existingObject(with: id) as? Issue
     }
 }
