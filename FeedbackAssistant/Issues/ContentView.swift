@@ -11,6 +11,8 @@ struct ContentView: View {
     @Environment(\.requestReview) var requestReview
     @StateObject var viewModel: ViewModel
 
+    private let newIssueActivity = "me.eng.yg.FeedbackAssistant.newIssue"
+
     var body: some View {
         List(selection: $viewModel.selectedIssue) {
             ForEach(viewModel.dataController.issuesForSelectedFilter()) { issue in
@@ -43,6 +45,13 @@ struct ContentView: View {
         .onOpenURL(perform: { url in
             openURL(url)
         })
+        .userActivity(newIssueActivity, { activity in
+            activity.isEligibleForPrediction = true
+            activity.title = "New Issue"
+        })
+        .onContinueUserActivity(newIssueActivity, perform: { userActivity in
+            resumeActivity(userActivity)
+        })
     }
 
 
@@ -61,6 +70,10 @@ struct ContentView: View {
         if url.absoluteString.contains("newIssue") {
             viewModel.dataController.newIssue()
         }
+    }
+
+    func resumeActivity(_ userActivity: NSUserActivity) {
+        viewModel.dataController.newIssue()
     }
 }
 
