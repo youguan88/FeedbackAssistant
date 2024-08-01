@@ -13,6 +13,8 @@ struct FeedbackAssistantApp: App {
     @Environment(\.scenePhase) var scenePhase
     @StateObject var dataController = DataController()
 
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         WindowGroup {
             NavigationSplitView {
