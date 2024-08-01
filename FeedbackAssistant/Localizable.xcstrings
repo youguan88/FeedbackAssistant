@@ -466,6 +466,22 @@
         }
       }
     },
+    "Get the most out of our app" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get the most out of our app"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充分利用我们的应用程序"
+          }
+        }
+      }
+    },
     "High" : {
       "localizations" : {
         "en" : {
@@ -482,6 +498,22 @@
         }
       }
     },
+    "In-app purchases are disabled" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In-app purchases are disabled"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用程序内购买已禁用"
+          }
+        }
+      }
+    },
     "Issues" : {
       "localizations" : {
         "en" : {
@@ -494,6 +526,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "问题"
+          }
+        }
+      }
+    },
+    "Loading..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading..."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加载中..."
           }
         }
       }
@@ -840,6 +888,22 @@
         }
       }
     },
+    "Restore Purchases" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Purchases"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复购买"
+          }
+        }
+      }
+    },
     "Show awards" : {
       "localizations" : {
         "en" : {
@@ -884,6 +948,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "定制筛选"
+          }
+        }
+      }
+    },
+    "Sorry, there was an error loading our store" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorry, there was an error loading our store"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "抱歉，加载我们的商店时发生错误"
           }
         }
       }
@@ -984,6 +1064,22 @@
         }
       }
     },
+    "Try Again" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try Again"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试"
+          }
+        }
+      }
+    },
     "Turn Filter Off" : {
       "localizations" : {
         "en" : {
@@ -1028,6 +1124,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已解锁: %@"
+          }
+        }
+      }
+    },
+    "Upgrade Today!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upgrade Today!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立即升级！"
+          }
+        }
+      }
+    },
+    "You can't purchase the premium unlock because in-app purchases are disabled on this device.\nPlease ask whomever manages your device for assistance" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can't purchase the premium unlock because in-app purchases are disabled on this device.\nPlease ask whomever manages your device for assistance"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您无法购买高级解锁版，因为此设备禁用应用内购买。\n请向管理您的设备的人寻求帮助"
           }
         }
       }
