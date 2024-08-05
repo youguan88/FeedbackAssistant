@@ -62,6 +62,7 @@
 		D8F207BC2C4E865300A43FC5 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = D8F207BA2C4E865300A43FC5 /* Awards.json */; };
 		D8F207BE2C4E86F700A43FC5 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F207BD2C4E86F700A43FC5 /* Award.swift */; };
 		D8F207C02C4E880600A43FC5 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F207BF2C4E880600A43FC5 /* AwardsView.swift */; };
+		D8F5A30A2C608B6500A3DB93 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D8814AF82C4F390000F29B18 /* Localizable.xcstrings */; };
 		D8F6C9882C5B327B0058E08A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6C9872C5B327B0058E08A /* AppDelegate.swift */; };
 		D8F6C98A2C5B329B0058E08A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6C9892C5B329B0058E08A /* SceneDelegate.swift */; };
 		D8F6EA8B2C566E7E009CA730 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6EA8A2C566E7E009CA730 /* ContentViewModel.swift */; };
@@ -519,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F5A30A2C608B6500A3DB93 /* Localizable.xcstrings in Resources */,
 				D80D491B2C5BC4F800C156D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

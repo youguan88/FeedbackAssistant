@@ -710,6 +710,22 @@
         }
       }
     },
+    "Nothing!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无！"
+          }
+        }
+      }
+    },
     "OK" : {
       "localizations" : {
         "en" : {
@@ -1128,6 +1144,22 @@
         }
       }
     },
+    "Up next..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up next..."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接下来"
+          }
+        }
+      }
+    },
     "Upgrade Today!" : {
       "localizations" : {
         "en" : {
@@ -1156,6 +1188,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "您无法购买高级解锁版，因为此设备禁用应用内购买。\n请向管理您的设备的人寻求帮助"
+          }
+        }
+      }
+    },
+    "Your #1 top-priority issue." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your #1 top-priority issue."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你最需要处理的问题是"
           }
         }
       }
