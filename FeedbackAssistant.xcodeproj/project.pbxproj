@@ -10,7 +10,7 @@
 		D80D49122C5BC4F700C156D1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D49112C5BC4F700C156D1 /* WidgetKit.framework */; };
 		D80D49142C5BC4F700C156D1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D49132C5BC4F700C156D1 /* SwiftUI.framework */; };
 		D80D49172C5BC4F700C156D1 /* FeedbackAssistantWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D49162C5BC4F700C156D1 /* FeedbackAssistantWidgetBundle.swift */; };
-		D80D49192C5BC4F700C156D1 /* FeedbackAssistantWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D49182C5BC4F700C156D1 /* FeedbackAssistantWidget.swift */; };
+		D80D49192C5BC4F700C156D1 /* SimpleFeedbackAssistantWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D49182C5BC4F700C156D1 /* SimpleFeedbackAssistantWidget.swift */; };
 		D80D491B2C5BC4F800C156D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80D491A2C5BC4F800C156D1 /* Assets.xcassets */; };
 		D80D491F2C5BC4F800C156D1 /* FeedbackAssistantWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D80D490F2C5BC4F700C156D1 /* FeedbackAssistantWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D80D49242C5BC79200C156D1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D87FCDDF2C489FDD00451197 /* Main.xcdatamodeld */; };
@@ -34,6 +34,7 @@
 		D844DC0F2C4FDAEC0041A140 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844DC0E2C4FDAEC0041A140 /* UserFilterRow.swift */; };
 		D84CA03A2C53D496005E291F /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84CA0392C53D496005E291F /* SidebarViewModel.swift */; };
 		D85713CB2C591193003DC6C3 /* DataController-Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85713CA2C591193003DC6C3 /* DataController-Notifications.swift */; };
+		D85B17562C61015B00317823 /* ComplexFeedbackAssistantWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85B17552C61015B00317823 /* ComplexFeedbackAssistantWidget.swift */; };
 		D8608E0A2C511B0B00796A4A /* AwardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8608E092C511B0B00796A4A /* AwardsTest.swift */; };
 		D8608E0C2C5123D600796A4A /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8608E0B2C5123D600796A4A /* DevelopmentTests.swift */; };
 		D8608E0E2C512C9600796A4A /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8608E0D2C512C9600796A4A /* ExtensionTests.swift */; };
@@ -112,7 +113,7 @@
 		D80D49112C5BC4F700C156D1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D80D49132C5BC4F700C156D1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D80D49162C5BC4F700C156D1 /* FeedbackAssistantWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAssistantWidgetBundle.swift; sourceTree = "<group>"; };
-		D80D49182C5BC4F700C156D1 /* FeedbackAssistantWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAssistantWidget.swift; sourceTree = "<group>"; };
+		D80D49182C5BC4F700C156D1 /* SimpleFeedbackAssistantWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFeedbackAssistantWidget.swift; sourceTree = "<group>"; };
 		D80D491A2C5BC4F800C156D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D80D491C2C5BC4F800C156D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D80D492C2C5BC8A900C156D1 /* DataController-Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Awards.swift"; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		D844DC0E2C4FDAEC0041A140 /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		D84CA0392C53D496005E291F /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		D85713CA2C591193003DC6C3 /* DataController-Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-Notifications.swift"; sourceTree = "<group>"; };
+		D85B17552C61015B00317823 /* ComplexFeedbackAssistantWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexFeedbackAssistantWidget.swift; sourceTree = "<group>"; };
 		D8608E092C511B0B00796A4A /* AwardsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTest.swift; sourceTree = "<group>"; };
 		D8608E0B2C5123D600796A4A /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		D8608E0D2C512C9600796A4A /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
@@ -218,7 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				D80D49162C5BC4F700C156D1 /* FeedbackAssistantWidgetBundle.swift */,
-				D80D49182C5BC4F700C156D1 /* FeedbackAssistantWidget.swift */,
+				D80D49182C5BC4F700C156D1 /* SimpleFeedbackAssistantWidget.swift */,
+				D85B17552C61015B00317823 /* ComplexFeedbackAssistantWidget.swift */,
 				D80D491A2C5BC4F800C156D1 /* Assets.xcassets */,
 				D80D491C2C5BC4F800C156D1 /* Info.plist */,
 			);
@@ -564,11 +567,12 @@
 				D80D49282C5BC80500C156D1 /* Filter.swift in Sources */,
 				D80D49262C5BC7B500C156D1 /* Issue-CoreDataHelpers.swift in Sources */,
 				D80D49272C5BC7B800C156D1 /* Tag-CoreDataHelpers.swift in Sources */,
+				D85B17562C61015B00317823 /* ComplexFeedbackAssistantWidget.swift in Sources */,
 				D80D49242C5BC79200C156D1 /* Main.xcdatamodeld in Sources */,
 				D80D492B2C5BC83B00C156D1 /* DataController-StoreKit.swift in Sources */,
 				D80D49252C5BC7B100C156D1 /* DataController.swift in Sources */,
 				D80D49172C5BC4F700C156D1 /* FeedbackAssistantWidgetBundle.swift in Sources */,
-				D80D49192C5BC4F700C156D1 /* FeedbackAssistantWidget.swift in Sources */,
+				D80D49192C5BC4F700C156D1 /* SimpleFeedbackAssistantWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

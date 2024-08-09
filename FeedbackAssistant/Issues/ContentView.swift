@@ -43,7 +43,7 @@ struct ContentView: View {
             askForReview()
         })
         .onOpenURL(perform: { url in
-            openURL(url)
+            viewModel.openURL(url)
         })
         .userActivity(newIssueActivity, { activity in
             activity.isEligibleForPrediction = true
@@ -63,12 +63,6 @@ struct ContentView: View {
     func askForReview() {
         if viewModel.shouldRequestReview {
             requestReview()
-        }
-    }
-
-    func openURL(_ url: URL) {
-        if url.absoluteString.contains("newIssue") {
-            viewModel.dataController.newIssue()
         }
     }
 

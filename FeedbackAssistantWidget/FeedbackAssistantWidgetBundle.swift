@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct FeedbackAssistantWidgetBundle: WidgetBundle {
     var body: some Widget {
-        FeedbackAssistantWidget()
+        SimpleFeedbackAssistantWidget()
+        ComplexFeedbackAssistantWidget()
     }
 }
