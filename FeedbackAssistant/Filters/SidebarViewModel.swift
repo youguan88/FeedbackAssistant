@@ -32,7 +32,7 @@ extension SidebarView {
             tagsController = NSFetchedResultsController(
                 fetchRequest: request,
                 managedObjectContext: dataController.container.viewContext,
-                sectionNameKeyPath: nil, 
+                sectionNameKeyPath: nil,
                 cacheName: nil
             )
             super.init()

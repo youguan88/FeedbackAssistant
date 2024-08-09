@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IssueRow: View {
     @EnvironmentObject var dataController: DataController
-    @StateObject var viewModel : ViewModel
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         NavigationLink(value: viewModel.issue) {

@@ -54,7 +54,6 @@ extension Issue {
         set { reminderTime = newValue }
     }
 
-
     static var example: Issue {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext

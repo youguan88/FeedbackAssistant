@@ -13,12 +13,12 @@ struct SimpleProvider: TimelineProvider {
         SimpleEntry(date: .now, issues: [.example])
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: .now, issues: loadIssues())
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let entry = SimpleEntry(date: .now, issues: loadIssues())
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
@@ -36,7 +36,7 @@ struct SimpleEntry: TimelineEntry {
     let issues: [Issue]
 }
 
-struct SimpleFeedbackAssistantWidgetEntryView : View {
+struct SimpleFeedbackAssistantWidgetEntryView: View {
     var entry: SimpleProvider.Entry
 
     var body: some View {

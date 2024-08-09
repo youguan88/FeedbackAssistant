@@ -52,7 +52,7 @@ struct IssueViewToolbar: View {
         // for iOS 16 and before
         if issue.completed {
             // Basic success haptics
-            //UINotificationFeedbackGenerator().notificationOccurred(.success)
+            // UINotificationFeedbackGenerator().notificationOccurred(.success)
 
             // Customizable haptics
             do {
@@ -83,12 +83,17 @@ struct IssueViewToolbar: View {
                     parameters: [intensity, sharpness],
                     relativeTime: 0
                 )
-                let event2 = CHHapticEvent(eventType: .hapticContinuous, parameters: [sharpness, intensity], relativeTime: 0.125, duration: 1)
+                let event2 = CHHapticEvent(
+                    eventType: .hapticContinuous,
+                    parameters: [sharpness, intensity],
+                    relativeTime: 0.125,
+                    duration: 1
+                )
                 let pattern = try CHHapticPattern(events: [event1, event2], parameterCurves: [parameter])
                 let player = try engine?.makePlayer(with: pattern)
                 try player?.start(atTime: 0)
             } catch {
-                //haptics didn't work
+                // haptics didn't work
             }
         }
     }

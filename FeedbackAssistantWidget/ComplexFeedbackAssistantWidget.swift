@@ -13,12 +13,12 @@ struct ComplexProvider: TimelineProvider {
         ComplexEntry(date: .now, issues: [.example])
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (ComplexEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (ComplexEntry) -> Void) {
         let entry = ComplexEntry(date: .now, issues: loadIssues())
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         let entry = ComplexEntry(date: .now, issues: loadIssues())
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
@@ -36,7 +36,7 @@ struct ComplexEntry: TimelineEntry {
     let issues: [Issue]
 }
 
-struct ComplexFeedbackAssistantWidgetEntryView : View {
+struct ComplexFeedbackAssistantWidgetEntryView: View {
     @Environment(\.widgetFamily) var widgetFamily
     @Environment(\.dynamicTypeSize) var dynamicTypeSize
 

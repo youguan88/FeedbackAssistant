@@ -42,7 +42,7 @@ class DataController: ObservableObject {
 
     /// The UserDefaults suite where we're saving user data.
     let defaults: UserDefaults
-    
+
     /// The StoreKit products we've loaded for the store
     @Published var products = [Product]()
 
@@ -83,9 +83,7 @@ class DataController: ObservableObject {
         self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
-        storeTask = Task {
-            await monitorTransactions()
-        }
+        storeTask = Task { await monitorTransactions() }
 
         // For testing and previewing purposes, we create a
         // temporary, in-memory database by writing to /dev/null
@@ -131,7 +129,7 @@ class DataController: ObservableObject {
                 description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
 
                 if let coordinator = self?.container.persistentStoreCoordinator {
-                    self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate (
+                    self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate(
                         forStoreWith: description,
                         coordinator: coordinator
                     )

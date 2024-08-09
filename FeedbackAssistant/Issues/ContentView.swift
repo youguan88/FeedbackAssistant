@@ -54,7 +54,6 @@ struct ContentView: View {
         })
     }
 
-
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
         _viewModel = StateObject(wrappedValue: viewModel)
